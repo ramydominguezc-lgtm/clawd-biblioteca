@@ -1,0 +1,26 @@
+/* clawd-saltando — hoja de 13 fotogramas de 448x496 px.
+   Tiempo base: 83 ms por tiempo. Ciclo completo: 1.74 s. */
+.clawd-saltando {
+  width: 448px;
+  height: 496px;
+  background-image: url("clawd-saltando-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-saltando 1.74s step-end infinite;
+}
+
+@keyframes clawd-saltando {
+  0.000% { background-position: -0px 0; }
+  4.762% { background-position: -448px 0; }
+  9.524% { background-position: -896px 0; }
+  14.286% { background-position: -1344px 0; }
+  19.048% { background-position: -1792px 0; }
+  23.810% { background-position: -2240px 0; }
+  28.571% { background-position: -2688px 0; }
+  33.333% { background-position: -3136px 0; }
+  38.095% { background-position: -3584px 0; }
+  42.857% { background-position: -4032px 0; }
+  47.619% { background-position: -4480px 0; }
+  52.381% { background-position: -4928px 0; }
+  57.143% { background-position: -5376px 0; }
+}

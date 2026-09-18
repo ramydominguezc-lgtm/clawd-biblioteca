@@ -1,0 +1,70 @@
+/* clawd-bandera-con-subida — hoja de 12 fotogramas de 544x496 px.
+   Tiempo base: 70 ms por tiempo. Ciclo completo: 3.99 s. */
+.clawd-bandera-con-subida {
+  width: 544px;
+  height: 496px;
+  background-image: url("clawd-bandera-con-subida-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-bandera-con-subida 3.99s step-end infinite;
+}
+
+@keyframes clawd-bandera-con-subida {
+  0.000% { background-position: -0px 0; }
+  1.754% { background-position: -544px 0; }
+  3.509% { background-position: -1088px 0; }
+  5.263% { background-position: -1632px 0; }
+  7.018% { background-position: -2176px 0; }
+  8.772% { background-position: -2720px 0; }
+  10.526% { background-position: -3264px 0; }
+  12.281% { background-position: -3808px 0; }
+  14.035% { background-position: -4352px 0; }
+  15.789% { background-position: -4896px 0; }
+  17.544% { background-position: -5440px 0; }
+  19.298% { background-position: -5984px 0; }
+  21.053% { background-position: -1632px 0; }
+  22.807% { background-position: -2176px 0; }
+  24.561% { background-position: -2720px 0; }
+  26.316% { background-position: -3264px 0; }
+  28.070% { background-position: -3808px 0; }
+  29.825% { background-position: -4352px 0; }
+  31.579% { background-position: -4896px 0; }
+  33.333% { background-position: -5440px 0; }
+  35.088% { background-position: -5984px 0; }
+  36.842% { background-position: -1632px 0; }
+  38.596% { background-position: -2176px 0; }
+  40.351% { background-position: -2720px 0; }
+  42.105% { background-position: -3264px 0; }
+  43.860% { background-position: -3808px 0; }
+  45.614% { background-position: -4352px 0; }
+  47.368% { background-position: -4896px 0; }
+  49.123% { background-position: -5440px 0; }
+  50.877% { background-position: -5984px 0; }
+  52.632% { background-position: -1632px 0; }
+  54.386% { background-position: -2176px 0; }
+  56.140% { background-position: -2720px 0; }
+  57.895% { background-position: -3264px 0; }
+  59.649% { background-position: -3808px 0; }
+  61.404% { background-position: -4352px 0; }
+  63.158% { background-position: -4896px 0; }
+  64.912% { background-position: -5440px 0; }
+  66.667% { background-position: -5984px 0; }
+  68.421% { background-position: -1632px 0; }
+  70.175% { background-position: -2176px 0; }
+  71.930% { background-position: -2720px 0; }
+  73.684% { background-position: -3264px 0; }
+  75.439% { background-position: -3808px 0; }
+  77.193% { background-position: -4352px 0; }
+  78.947% { background-position: -4896px 0; }
+  80.702% { background-position: -5440px 0; }
+  82.456% { background-position: -5984px 0; }
+  84.211% { background-position: -1632px 0; }
+  85.965% { background-position: -2176px 0; }
+  87.719% { background-position: -2720px 0; }
+  89.474% { background-position: -3264px 0; }
+  91.228% { background-position: -3808px 0; }
+  92.982% { background-position: -4352px 0; }
+  94.737% { background-position: -4896px 0; }
+  96.491% { background-position: -5440px 0; }
+  98.246% { background-position: -5984px 0; }
+}

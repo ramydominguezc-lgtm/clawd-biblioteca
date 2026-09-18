@@ -1,0 +1,31 @@
+/* clawd-caminando — hoja de 13 fotogramas de 448x320 px.
+   Tiempo base: 80 ms por tiempo. Ciclo completo: 2.64 s. */
+.clawd-caminando {
+  width: 448px;
+  height: 320px;
+  background-image: url("clawd-caminando-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-caminando 2.64s step-end infinite;
+}
+
+@keyframes clawd-caminando {
+  0.000% { background-position: -0px 0; }
+  15.152% { background-position: -448px 0; }
+  18.182% { background-position: -896px 0; }
+  21.212% { background-position: -1344px 0; }
+  24.242% { background-position: -1792px 0; }
+  30.303% { background-position: -2240px 0; }
+  36.364% { background-position: -1792px 0; }
+  42.424% { background-position: -2688px 0; }
+  48.485% { background-position: -1792px 0; }
+  54.545% { background-position: -896px 0; }
+  60.606% { background-position: -3136px 0; }
+  66.667% { background-position: -3584px 0; }
+  69.697% { background-position: -4032px 0; }
+  72.727% { background-position: -4480px 0; }
+  78.788% { background-position: -4928px 0; }
+  84.848% { background-position: -4480px 0; }
+  90.909% { background-position: -5376px 0; }
+  96.970% { background-position: -4480px 0; }
+}

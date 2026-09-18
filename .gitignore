@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+~$*
+
+# Aqui NO se ignora `fotogramas/` ni `svg/` aunque su LEEME diga que son
+# regenerables: la pieza `10-pixel` de `anthro-pic-brand` depende del fotograma
+# 62 de `paseo`, y regenerarlo pide la skill `clawd-animaciones` con Chromium.
+# La biblioteca entera son 9 MB; no vale la pena arriesgar eso por ahorrarlos.

@@ -1,0 +1,31 @@
+<div class="label-carga" data-tema="claro" data-modo="solicitando">
+<span class="label-carga__estrella" aria-hidden="true">·</span><span class="label-carga__texto"><span>R</span><span>e</span><span>s</span><span>e</span><span>a</span><span>r</span><span>c</span><span>h</span><span>i</span><span>n</span><span>g</span><span>…</span></span>
+</div>
+<style>
+.label-carga{--naranja:rgb(215,119,87);--brillo:rgb(245,149,117);display:inline-flex;align-items:baseline;
+  font-family:"Cascadia Mono","SF Mono",Menlo,Consolas,monospace;font-size:28px;color:var(--naranja);
+  white-space:pre}
+.label-carga[data-tema="oscuro"]{--brillo:rgb(235,159,127)}
+.label-carga__estrella{display:inline-block;width:2ch;text-align:center;
+  font-family:"Segoe UI Symbol","Apple Symbols","Noto Sans Symbols 2",sans-serif}
+.label-carga__texto span.b{color:var(--brillo)}
+</style>
+<script>
+(() => {
+  const raiz = document.currentScript.previousElementSibling.previousElementSibling;
+  const estrella = raiz.querySelector('.label-carga__estrella');
+  const letras = [...raiz.querySelectorAll('.label-carga__texto span')];
+  const cuadros = [...'·✢✳✶✻✽✽✻✶✳✢·'];
+  const largo = letras.length, total = 1440, paso = 45.0000;
+  const modo = raiz.dataset.modo;
+  const t0 = performance.now();
+  (function cuadro(ahora) {
+    const t = (ahora - t0) % total;
+    estrella.textContent = cuadros[Math.floor(t / 120) % cuadros.length];
+    const n = Math.floor(t / paso) % (largo + 20);
+    const g = modo === 'solicitando' ? n - 10 : largo + 10 - n;
+    letras.forEach((l, i) => l.classList.toggle('b', Math.abs(i - g) <= 1));
+    requestAnimationFrame(cuadro);
+  })(t0);
+})();
+</script>

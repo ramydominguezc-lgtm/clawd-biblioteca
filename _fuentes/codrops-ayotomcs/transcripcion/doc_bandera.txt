@@ -1,0 +1,39 @@
+Clawd ondeando la bandera — datos de la animacion. El motor vive en `animar_pixel.py`.
+
+Clawd sostiene una bandera a cuadros que sube y ondea; el cuerpo se mece al
+reves que la tela. Es "The Flag Waver" del articulo de Codrops
+"Reverse-Engineering Claude AI's Mascot Animations with SVG and GSAP"
+(Ayotomiwa Wale-Durojaye, mayo 2026), demo en ayotomcs.me/claude-mascot.
+
+Reemplaza a la bandera anterior, borrada el 16/09/2026 por estar mal hecha.
+
+De donde salieron estos datos
+-----------------------------
+Del codigo de la demo (modulo 4030), capturado con `capturar_gsap.js` y el GSAP
+real, cada 70 ms:
+
+- 12 telas dibujadas en reticula de 5 px. Cuadros 0-2: la tela sube. Cuadros
+  3-11: ondea en bucle (la subida no se repite).
+- Por cuadro, del codigo: balanceo del cuerpo [0,0,-5,-5,0,4,4,4,0,0,-5,-5] px,
+  mano [0,-6,-12,-14,-8,-2,0,0,-4,-10,-16,-18] px y mano izquierda
+  [0,0,4,4,0,0,0,0,0,0,4,4] px.
+
+Dos capas, dos reticulas
+------------------------
+El cuerpo va en U = 16/3 px (bdy en x = 21.66, suelo en y = 146). La tela va en
+su propia reticula de 5 px con 1 celda = 1U. Si la tela se muestreara en U, el
+damero de 5 px haria muaré: cada ~15 celdas se duplicaria o perderia un cuadro.
+La tela se ancla por el asta a la posicion real de la mano en cada cuadro, asi
+que sigue pegada a la muneca.
+
+Salidas
+-------
+- clawd-bandera: solo el bucle, 9 cuadros x 70 ms = 0.63 s. Para GIF, web y
+  todo lo que se repite.
+- clawd-bandera-con-subida: la subida una vez + 6 vueltas (4.2 s). Para video,
+  que no se repite solo.
+
+Colores: cuerpo y ojos canonicos; el blanco del damero es el de la demo.
+Los ojos son "^ ^" (contento), dibujo de la demo.
+
+Leyenda: .  transparente   #  naranja   @  negro   w  blanco

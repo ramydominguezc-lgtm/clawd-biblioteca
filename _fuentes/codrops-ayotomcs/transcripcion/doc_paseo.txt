@@ -1,0 +1,40 @@
+Clawd de paseo — datos de la animacion. El motor vive en `animar_pixel.py`.
+
+Clawd se inclina a un lado y al otro, baja la vista, da un brinco, camina, se
+agacha y salta. Es "Walking Claude" del articulo de Codrops "Reverse-Engineering
+Claude AI's Mascot Animations with SVG and GSAP" (Ayotomiwa Wale-Durojaye, mayo
+2026), demo en ayotomcs.me/claude-mascot.
+
+NO es `clawd_caminando.py`: aquella camina en el sitio con 13 poses dibujadas;
+esta avanza y en la fuente no tiene poses, solo tweens. Tambien es otro dibujo:
+banda de brazos de 20U, no de 24U.
+
+Version 2 (16/09/2026). La primera tenia errores: se rasterizaba el personaje
+entero a 25 fps y las rotaciones dejaban escalones sueltos, patas partidas y un
+cuerpo que media 15 o 16 celdas segun el cuadro.
+
+De donde salieron estos datos
+-----------------------------
+1. `capturar_gsap.js` con GEOMETRIA=1 y ANCLA="Group 2": el componente corre en
+   Chrome con GSAP 3.14.2 y, cada 20 ms, se guarda la geometria exacta de cada
+   pieza (cuerpo, manos, ojos, cada pata) y la traslacion del grupo.
+2. `transcribir_svg.piezas_a_rejilla()` dibuja cada pieza con reglas de pixel
+   art: el movimiento del personaje entero se redondea a celdas enteras; cada
+   pieza mide siempre lo mismo (cuerpo 16x12, patas de 2 de ancho, ojos 2x2);
+   una rotacion se dibuja partiendo la pieza a la mitad y corriendo cada mitad.
+3. Los instantes iguales seguidos se juntan en tramos.
+
+Recorrido recortado para redes
+------------------------------
+En la demo el recorrido depende del ancho de la pagina (800 unidades en el video
+del articulo: un banner de ~5:1). Aqui se fijo en 214 unidades, dos veces el
+ancho de Clawd: 55 % caminando y 45 % saltando, como en la fuente. El lienzo
+queda de 1008 x 544 px y cabe en un post 4:5 o un reel 9:16 con aire para
+texto.
+
+Ritmo
+-----
+Ciclo de 11.52 s, 576 instantes de 20 ms (50 fps). 20 ms es lo minimo que un GIF
+respeta en todos los visores; el MP4 va a 50 fps exactos.
+
+Leyenda: .  transparente    #  naranja cuerpo    @  ojo

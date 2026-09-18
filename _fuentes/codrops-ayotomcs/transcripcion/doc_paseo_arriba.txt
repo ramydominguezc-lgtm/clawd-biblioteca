@@ -1,0 +1,19 @@
+Clawd de paseo mirando arriba — datos de la animacion. El motor vive en `animar_pixel.py`.
+
+Variante de `clawd_paseo.py`: el mismo paseo, pero cada vez que el original
+baja la vista, este la sube. Todo lo demas es identico: recorrido, ritmo,
+brinco, caminata y salto. Ver el docstring de `clawd_paseo.py` para el metodo.
+
+Que se cambio
+-------------
+En la linea de tiempo GSAP del componente (modulo 630665) solo se tocaron los
+cuatro tweens de los ojos que miran hacia abajo:
+
+    inclinado y mirando abajo   y: 12  ->  y: -5
+    mirando abajo               y: 23  ->  y: -9   (dos veces)
+
+-9 deja los ojos pegados al borde de arriba del cuerpo (en reposo estan a 11
+unidades del borde). Mas arriba se saldrian del cuerpo. El componente modificado
+esta en `Clawd - Biblioteca/_fuentes/codrops-ayotomcs/componente-630665-mirando-arriba.js`.
+
+Leyenda: .  transparente    #  naranja cuerpo    @  ojo

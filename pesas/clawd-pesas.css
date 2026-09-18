@@ -1,0 +1,61 @@
+/* clawd-pesas — hoja de 30 fotogramas de 512x400 px.
+   Tiempo base: 5 ms por tiempo. Ciclo completo: 7.12 s. */
+.clawd-pesas {
+  width: 512px;
+  height: 400px;
+  background-image: url("clawd-pesas-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-pesas 7.12s step-end infinite;
+}
+
+@keyframes clawd-pesas {
+  0.000% { background-position: -0px 0; }
+  1.193% { background-position: -512px 0; }
+  2.386% { background-position: -1024px 0; }
+  3.579% { background-position: -1536px 0; }
+  4.772% { background-position: -2048px 0; }
+  5.965% { background-position: -2560px 0; }
+  7.158% { background-position: -3072px 0; }
+  10.947% { background-position: -3584px 0; }
+  14.737% { background-position: -4096px 0; }
+  15.930% { background-position: -4608px 0; }
+  17.123% { background-position: -5120px 0; }
+  18.316% { background-position: -5632px 0; }
+  19.509% { background-position: -6144px 0; }
+  20.702% { background-position: -6656px 0; }
+  21.895% { background-position: -7168px 0; }
+  23.088% { background-position: -7680px 0; }
+  28.702% { background-position: -8192px 0; }
+  29.895% { background-position: -8704px 0; }
+  31.088% { background-position: -9216px 0; }
+  32.281% { background-position: -9728px 0; }
+  33.474% { background-position: -10240px 0; }
+  34.667% { background-position: -10752px 0; }
+  40.281% { background-position: -10240px 0; }
+  41.474% { background-position: -9728px 0; }
+  42.667% { background-position: -11264px 0; }
+  43.860% { background-position: -6656px 0; }
+  45.053% { background-position: -7168px 0; }
+  46.246% { background-position: -7680px 0; }
+  51.860% { background-position: -8192px 0; }
+  53.053% { background-position: -8704px 0; }
+  54.246% { background-position: -9216px 0; }
+  55.439% { background-position: -9728px 0; }
+  56.632% { background-position: -10240px 0; }
+  57.825% { background-position: -10752px 0; }
+  63.439% { background-position: -10240px 0; }
+  64.632% { background-position: -9728px 0; }
+  65.825% { background-position: -11264px 0; }
+  67.018% { background-position: -11776px 0; }
+  68.211% { background-position: -12288px 0; }
+  69.404% { background-position: -12800px 0; }
+  70.596% { background-position: -13312px 0; }
+  71.789% { background-position: -3584px 0; }
+  72.982% { background-position: -2560px 0; }
+  74.175% { background-position: -2048px 0; }
+  75.368% { background-position: -13824px 0; }
+  76.561% { background-position: -14336px 0; }
+  77.754% { background-position: -14848px 0; }
+  78.947% { background-position: -0px 0; }
+}

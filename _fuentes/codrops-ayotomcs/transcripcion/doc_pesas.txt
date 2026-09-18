@@ -1,0 +1,38 @@
+Clawd con pesas — datos de la animacion. El motor vive en `animar_pixel.py`.
+
+Clawd levanta una mancuerna, la sube por encima de la cabeza, hace una segunda
+repeticion y la deja. Es "Gym Claude" del articulo de Codrops
+"Reverse-Engineering Claude AI's Mascot Animations with SVG and GSAP"
+(Ayotomiwa Wale-Durojaye, mayo 2026), demo en ayotomcs.me/claude-mascot.
+
+De donde salieron estos datos
+-----------------------------
+36 dibujos SVG en la demo, reproducidos en 48 tiempos: los dibujos 13-24 se
+tocan dos veces (la segunda repeticion). `capturar_gsap.js` tomo cada uno con
+el GSAP real y `transcribir_svg.py` lo paso a la reticula de Clawd (U = 16/3 px,
+cuerpo en x = 36, suelo en y = 128). Las dos pasadas de cada dibujo repetido
+dieron exactamente la misma rejilla.
+
+Ritmo (del codigo de la demo)
+-----------------------------
+- 85 ms por cuadro.
+- Dibujos 6 y 7: 270 ms. Es el esfuerzo arriba del levantamiento.
+- Dibujos 15 y 21: 400 ms. Pausa entre repeticiones.
+- Ultimo cuadro: 1.5 s antes de volver a empezar.
+TIEMPO_MS = 5 es solo la unidad comun: 85 ms = 17 tiempos.
+
+El error de la demo que NO se copio
+-----------------------------------
+El articulo dice que el ultimo cuadro "se sostiene 1.5 s". En la demo la linea
+de tiempo termina en el mismo instante en que ese cuadro aparece (una linea de
+GSAP dura hasta su ultimo evento), asi que los 1.5 s nunca se ven. Mismo error
+que el cuadro 8 del confeti. Aqui se respetan los 1.5 s: ciclo de 7.125 s.
+
+Colores
+-------
+Cuerpo y ojo: canonicos. La mancuerna usa los hex declarados en la demo
+(#1A4C81 azul, #5D5B56 gris): no son de la paleta de marca, pero son el objeto
+original. La mancuerna esta dibujada en reticula de 5-6 px; al pasarla a U
+puede perder o ganar una celda en algun borde.
+
+Leyenda: .  transparente   #  naranja cuerpo   @  ojo / placas   d  barra   g  gris

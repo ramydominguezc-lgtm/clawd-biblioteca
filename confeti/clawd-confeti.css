@@ -1,0 +1,21 @@
+/* clawd-confeti — hoja de 8 fotogramas de 640x576 px.
+   Tiempo base: 125 ms por tiempo. Ciclo completo: 1.00 s. */
+.clawd-confeti {
+  width: 640px;
+  height: 576px;
+  background-image: url("clawd-confeti-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-confeti 1.00s step-end infinite;
+}
+
+@keyframes clawd-confeti {
+  0.000% { background-position: -0px 0; }
+  12.500% { background-position: -640px 0; }
+  25.000% { background-position: -1280px 0; }
+  37.500% { background-position: -1920px 0; }
+  50.000% { background-position: -2560px 0; }
+  62.500% { background-position: -3200px 0; }
+  75.000% { background-position: -3840px 0; }
+  87.500% { background-position: -4480px 0; }
+}

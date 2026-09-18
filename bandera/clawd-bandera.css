@@ -1,0 +1,22 @@
+/* clawd-bandera — hoja de 9 fotogramas de 544x496 px.
+   Tiempo base: 70 ms por tiempo. Ciclo completo: 0.63 s. */
+.clawd-bandera {
+  width: 544px;
+  height: 496px;
+  background-image: url("clawd-bandera-hoja.png");
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  animation: clawd-bandera 0.63s step-end infinite;
+}
+
+@keyframes clawd-bandera {
+  0.000% { background-position: -0px 0; }
+  11.111% { background-position: -544px 0; }
+  22.222% { background-position: -1088px 0; }
+  33.333% { background-position: -1632px 0; }
+  44.444% { background-position: -2176px 0; }
+  55.556% { background-position: -2720px 0; }
+  66.667% { background-position: -3264px 0; }
+  77.778% { background-position: -3808px 0; }
+  88.889% { background-position: -4352px 0; }
+}
