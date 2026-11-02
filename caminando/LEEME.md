@@ -33,9 +33,8 @@ La receta usa `tiempo_ms=80`, **y así se queda** (decidido por Ramses el
 el redondeo a 60 fps). Antes el MP4 redondeaba cada tiempo a 5 cuadros y duraba
 2.75 s.
 
-**No mezclar con `clawd-base`.** Es otro dibujo: cuerpo de 8 celdas de ancho
-contra 12, ojos en otra posición. Son dos versiones válidas de la mascota, pero
-juntas en una misma pieza se leen como un error.
+**No mezclar con los stickers quietos de la skill de marca.** Son otro dibujo:
+juntos en una misma pieza se leen como un error.
 
 ## Contenido
 
