@@ -64,19 +64,18 @@ está instalada.
 
 **Si se regenera `paseo`, esa pieza cambia.** Avisar antes.
 
-Al revés no pasa nada: los stickers **quietos** de Clawd —`clawd-base`,
-`coffee`, `search`, `skateboard`, `headphones`— viven en la skill de marca y no
-entran aquí. Esta biblioteca guarda animaciones; un PNG suelto no tiene ninguno
-de los formatos de la tabla de entrega, y además `clawd-base` es otro dibujo
-(regla 3).
+Al revés no pasa nada: los stickers **quietos** de Clawd —`coffee`,
+`search`, `skateboard`, `headphones`— viven en la skill de marca y no entran
+aquí. Esta biblioteca guarda animaciones; un PNG suelto no tiene ninguno de los
+formatos de la tabla de entrega, y además es otro dibujo (regla 2).
 
 ## Reglas de uso (valen para todas)
 
 1. **Nunca sobre fondo naranja.** Clawd es naranja y desaparece.
 2. **No mezclar dibujos distintos en una pieza:** `caminando`, `saltando`,
    `confeti` y `pesas` usan el Clawd canónico (brazos de 24U); `paseo` y `paseo-arriba`, el
-   de la demo (brazos de 20U); `bandera` tiene ojos "^ ^"; `clawd-base` de la
-   skill de marca es otro dibujo. Juntos se leen como error.
+   de la demo (brazos de 20U); `bandera` tiene ojos "^ ^"; los stickers de la
+   skill de marca son otro dibujo. Juntos se leen como error.
 4. **Labels de carga:** van con su color de producto, sin recolorear, y tampoco
    en piezas fijas.
 3. **No en piezas fijas** (flyer, PDF): la animación se congela. Ahí va un Clawd
